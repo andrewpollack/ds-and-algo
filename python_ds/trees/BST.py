@@ -11,9 +11,9 @@ class BST:
         if node == None:
             return
         
-        print(self.__printLMR(node.left))
+        print(self.__print_in_order(node.left))
         print(node)
-        print(self.__printLMR(node.right))
+        print(self.__print_in_order(node.right))
     
     def insert(self):
         pass
