@@ -4,8 +4,8 @@ test_BST = BST()
 
 print(test_BST.size_of())
 
-# test_BST.insert(3)
-# test_BST.insert(2)
+test_BST.insert(3)
+test_BST.insert(2)
 test_BST.insert(1)
 test_BST.insert(4)
 test_BST.insert(6)
@@ -16,4 +16,4 @@ print(test_BST.size_of())
 
 print(test_BST.contents_of())
 
-# print(test_BST.second_min_in())
+print(test_BST.second_min_in())

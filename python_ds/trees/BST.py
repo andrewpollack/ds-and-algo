@@ -65,23 +65,21 @@ class BST:
     def second_min_in(self):
         """
         Returns the second-smallest element of the given BST, or None 
-        if the tree doesn’thave at least two elements
+        if the tree doesn’t have at least two elements
         """
-        pass
-        """
-        head = self.root
-        if self.root == None:
-            return None
-        runner = self.root.left
-        if self.root.left == None:
-            if self.root.right != None:
-                return head
-            return None
-        
-        while runner.left != None:
-            head = head.left
-            runner = runner.left
+        stack = []
+        root = self.root
+        k = 2
 
-        return head
-        """
+        if root == None or root.left == root.right == None:
+            return None
         
+        while True:
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            k -= 1
+            if k == 0:
+                return root
+            root = root.right
